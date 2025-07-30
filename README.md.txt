@@ -14,6 +14,7 @@ Verwendete Technologien
 Frontend:
 HTML5, CSS3, JavaScript
 Bootstrap für responsives Design.
+PWA
 
 Backend:
 C#
