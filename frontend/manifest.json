@@ -1,0 +1,21 @@
+{
+    "name": "Unlockit Webshop",
+    "short_name": "Unlockit",
+    "description": "Dein Online-Shop für Game Keys, Gaming Zubehör und Merchandise.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#8a2be2",
+    "icons": [
+        {
+            "src": "assets/images/icons/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/images/icons/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

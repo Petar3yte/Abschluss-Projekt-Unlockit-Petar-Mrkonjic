@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlockit - Produkt bearbeiten</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html">Unlockit Admin - Dashboard</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" id="categories-nav-link">
+                    <a class="nav-link" href="categories.html">Kategorien</a>
+                </li>
+                    <li class="nav-item" id="attributes-nav-link">
+                    <a class="nav-link" href="attributes.html">Attribute</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Produkt bearbeiten</h1>
+        
+        <form id="product-form" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Produktname</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Beschreibung</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="price" class="form-label">Preis (€)</label>
+                    <input type="number" class="form-control" id="price" step="0.01" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="stock" class="form-label">Lagerbestand</label>
+                    <input type="number" class="form-control" id="stock" required>
+                </div>
+            </div>
+             <div class="mb-3">
+                <label for="category" class="form-label">Kategorie</label>
+                <select class="form-select" id="category" required></select>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Plattformen</label>
+                    <div id="platforms-container" class="border p-2 rounded" style="max-height: 150px; overflow-y: auto;"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Genres</label>
+                    <div id="genres-container" class="border p-2 rounded" style="max-height: 150px; overflow-y: auto;"></div>
+                </div>
+            </div>
+
+            <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary me-2">Änderungen speichern</button>
+                <a href="products.html" class="btn btn-secondary">Abbrechen</a>
+            </div>
+        </form>
+
+        <hr class="my-5">
+
+        <div class="mb-5">
+            <h2>Bilder verwalten</h2>
+            
+            <div class="mb-4">
+                <label for="image-upload" class="form-label">Neues Bild hochladen</label>
+                <div class="input-group">
+                    <input type="file" class="form-control" id="image-upload" accept="image/png, image/jpeg">
+                    <button class="btn btn-success" type="button" id="add-image-btn">Hochladen</button>
+                </div>
+            </div>
+    
+            <div id="image-gallery" class="row"></div>
+        </div>
+        
+        <hr class="my-5">
+
+        <div id="recent-orders-section" class="mb-5">
+            <h2>Letzte Bestellungen für dieses Produkt</h2>
+            <div id="recent-orders-container">
+                <p class="text-muted">Lade Bestelldaten...</p>
+            </div>
+        </div>
+    </div> 
+
+    <script src="js/dashboard.js"></script>    
+    <script src="js/product-edit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
