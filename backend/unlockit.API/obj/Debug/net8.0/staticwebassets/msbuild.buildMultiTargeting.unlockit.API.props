@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\unlockit.API.props" />
+</Project>
